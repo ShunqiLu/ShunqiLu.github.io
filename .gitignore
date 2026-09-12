@@ -1,0 +1,22 @@
+# Explicit publication allowlist
+*
+!*/
+!.gitignore
+!/.gitattributes
+!/.nojekyll
+!/404.html
+!/LICENSE
+!/README.md
+!/assets/favicon.svg
+!/assets/style.css
+!/index.html
+!/publications/classification_maximum_scattered_linear_sets_PG1q5.pdf
+!/publications/covariogram-balancing.html
+!/publications/covariogram-balancing.pdf
+!/publications/index.html
+!/publications/maximum-scattered-linear-sets-pg1q5.html
+!/publications/online_resource_crypto.pdf
+!/publications/sharp-closure-thresholds.html
+!/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf
+!/robots.txt
+!/sitemap.xml
