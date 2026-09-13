@@ -7,9 +7,16 @@
 !/404.html
 !/LICENSE
 !/README.md
+!/THIRD_PARTY_NOTICES.md
 !/assets/favicon.svg
+!/assets/fonts/Atkinson-Hyperlegible-OFL.txt
+!/assets/fonts/Crimson-Pro-OFL.txt
+!/assets/fonts/atkinson-hyperlegible-bold.woff2
+!/assets/fonts/atkinson-hyperlegible-regular.woff2
+!/assets/fonts/crimson-pro-roman.woff2
 !/assets/style.css
 !/index.html
+!/licenses/minimal-light-CC0.txt
 !/publications/classification_maximum_scattered_linear_sets_PG1q5.pdf
 !/publications/covariogram-balancing.html
 !/publications/covariogram-balancing.pdf
