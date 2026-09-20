@@ -1,0 +1,203 @@
+<!doctype html>
+<!-- ============================================================================
+     TEMPLATE FOR A NEW PAPER PAGE - not linked from anywhere, marked noindex.
+
+     How to use:
+       1. Copy this file to publications/<url-slug>.html
+       2. Replace every {{PLACEHOLDER}} below.
+       3. Add a matching <article class="paper-card"> block to index.html, giving it
+          an id, and reference that id from the relevant .area lists above it.
+       4. Add the new URL to sitemap.xml.
+       5. Delete any section you do not need (supplement, code links, and so on).
+
+     Keep the abstract, the keywords, and the key contributions identical to the
+     paper itself. The keyword list is the paper's own "Keywords" line, the MSC line
+     its own classification, and each key contribution one of its numbered results,
+     named in the <span class="ref"> reference.
+
+     Write every formula as LaTeX between \( and \), and put the whole expression
+     inside the delimiters, numerals included, so that KaTeX sets all of it in one
+     face: \(d \ge 14\), not \(d \ge\) 14. Display formulae go between \[ and \].
+     The first letter of the abstract is set automatically as an ornamented capital
+     sunk two lines, so it must be a plain A-Z letter: a formula, a quotation mark,
+     or a lowercase word leaves nothing for the initial to work with.
+
+     Placeholders:
+       {{TITLE}}          Paper title, plain text
+       {{TITLE_HTML}}     Paper title, may contain <sup>, <i>, entities
+       {{SLUG}}           File name without .html, also used for the BibTeX id
+       {{FIELD}}          Research areas it is filed under, e.g. Discrete geometry
+       {{SUMMARY}}        One or two sentences, used in <meta description>
+       {{KEYWORDS_CSV}}   The paper's own keyword line, comma separated
+       {{MSC}}            The paper's own subject classification
+       {{DATE_ISO}}       2026-09-13
+       {{DATE_HUMAN}}     13 September 2026
+       {{DATE_SLASH}}     2026/09/13   (Google Scholar citation_publication_date)
+       {{PDF_FILE}}       e.g. my_paper_v1.pdf  (place it in publications/)
+       {{DOI}}            e.g. 10.5281/zenodo.00000000
+       {{CODE_URL}}       GitHub repository URL
+       {{BIB_KEY}}        e.g. lu2027something
+============================================================================ -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} | Shunqi Lu</title>
+  <meta name="description" content="{{SUMMARY}}">
+  <meta name="author" content="Shunqi Lu">
+  <meta name="keywords" content="{{KEYWORDS_CSV}}">
+  <meta property="og:site_name" content="Shunqi Lu">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#fdfcf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161614" media="(prefers-color-scheme: dark)">
+  <link rel="canonical" href="https://shunqilu.github.io/publications/{{SLUG}}.html">
+  <link rel="preload" href="/assets/fonts/crimson-pro-roman.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/assets/fonts/atkinson-hyperlegible-regular.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/assets/katex/katex.min.css?v=20260914-sfogliato">
+  <link rel="stylesheet" href="/assets/style.css?v=20260914-sfogliato">
+  <link rel="icon" href="/assets/favicon.svg?v=20260914-sfogliato" type="image/svg+xml">
+  <!-- KaTeX is vendored, so formulae do not depend on a third-party host. Both
+       files must load before site.js, which calls the auto-render extension. -->
+  <script src="/assets/katex/katex.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/katex/auto-render.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/site.js?v=20260914-sfogliato" defer></script>
+  <!-- Google Scholar indexing relies on these; keep them accurate. -->
+  <meta name="citation_title" content="{{TITLE}}">
+  <meta name="citation_author" content="Shunqi Lu">
+  <meta name="citation_publication_date" content="{{DATE_SLASH}}">
+  <meta name="citation_pdf_url" content="https://shunqilu.github.io/publications/{{PDF_FILE}}">
+  <meta name="citation_doi" content="{{DOI}}">
+  <meta name="citation_language" content="en">
+  <meta name="citation_abstract_html_url" content="https://shunqilu.github.io/publications/{{SLUG}}.html">
+  <meta name="citation_keywords" content="{{KEYWORDS_CSV}}">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <p class="mast-name"><a href="/">Shunqi Lu<span class="dot" aria-hidden="true">.</span></a></p>
+      <nav class="mast-nav" aria-label="Main navigation">
+        <a href="/">About</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+        <a href="https://github.com/ShunqiLu" rel="me">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <a class="back-link" href="/#papers"><span class="arrow" aria-hidden="true">&larr;</span> All papers</a>
+
+      <header>
+        <div class="article-tagline">
+          <p class="eyebrow">{{FIELD}}</p>
+          <p class="badge">Preprint</p>
+        </div>
+        <h1 class="article-title">{{TITLE_HTML}}</h1>
+        <p class="authors"><a href="/">Shunqi Lu</a></p>
+        <dl class="fact-grid">
+          <div><dt>Type</dt><dd>Preprint</dd></div>
+          <div><dt>Date</dt><dd><time datetime="{{DATE_ISO}}">{{DATE_HUMAN}}</time></dd></div>
+          <div><dt>Version</dt><dd>v1 &middot; Zenodo</dd></div>
+          <div><dt>DOI</dt><dd><a href="https://doi.org/{{DOI}}">{{DOI}}</a></dd></div>
+          <div><dt>Code</dt><dd><a href="{{CODE_URL}}">GitHub repository</a></dd></div>
+        </dl>
+      </header>
+
+      <!-- Order is fixed: abstract, then keywords, then the contributions. -->
+      <section class="block" aria-labelledby="abstract-heading">
+        <div class="block-head"><h2 id="abstract-heading">Abstract</h2></div>
+        <div class="abstract">
+          <p>{{ABSTRACT_PARAGRAPH_1}}</p>
+        </div>
+        <div class="resources">
+          <a class="btn btn-primary" href="/publications/{{PDF_FILE}}" type="application/pdf">Read full paper (PDF) <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="{{CODE_URL}}">Reproducibility code <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://doi.org/{{DOI}}">Zenodo record <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="keywords-heading">
+        <div class="block-head"><h2 id="keywords-heading">Keywords</h2></div>
+        <ul class="tag-list is-roomy">
+          <li>{{KEYWORD_1}}</li>
+          <li>{{KEYWORD_2}}</li>
+          <li>{{KEYWORD_3}}</li>
+        </ul>
+        <p class="msc"><span>MSC &mdash;</span> {{MSC}}</p>
+      </section>
+
+      <!-- One item per numbered result of the paper. The <strong> is the result's own
+           name, the <span class="ref"> says where it is, the <p> states what it says. -->
+      <section class="block" aria-labelledby="keypoints-heading">
+        <div class="block-head"><h2 id="keypoints-heading">Key contributions</h2></div>
+        <ol class="keypoints">
+          <li>
+            <div>
+              <strong>{{POINT_1_TITLE}} <span class="ref">{{POINT_1_REF}}</span></strong>
+              <p>{{POINT_1_TEXT}}</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>{{POINT_2_TITLE}} <span class="ref">{{POINT_2_REF}}</span></strong>
+              <p>{{POINT_2_TEXT}}</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>{{POINT_3_TITLE}} <span class="ref">{{POINT_3_REF}}</span></strong>
+              <p>{{POINT_3_TEXT}}</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" aria-labelledby="cite-heading">
+        <div class="block-head"><h2 id="cite-heading">Cite this preprint</h2></div>
+        <div class="bib">
+          <div class="bib-head">
+            <p>BibTeX</p>
+            <button class="copy-btn" type="button" data-copy-target="#bib-{{SLUG}}" hidden>Copy</button>
+          </div>
+          <pre id="bib-{{SLUG}}"><code>@misc{{{BIB_KEY}},
+  author    = {Shunqi Lu},
+  title     = {{{TITLE}}},
+  year      = {2026},
+  version   = {v1},
+  publisher = {Zenodo},
+  doi       = {{{DOI}}},
+  url       = {https://doi.org/{{DOI}}}
+}</code></pre>
+        </div>
+        <p class="cite-plain">Shunqi Lu. (2026). <i>{{TITLE}}</i> (v1). Zenodo. https://doi.org/{{DOI}}</p>
+      </section>
+
+      <!-- Optional: link to the neighbouring papers. Delete if not wanted. -->
+      <nav class="paper-nav" aria-label="Other papers">
+        <a href="/publications/{{PREV_SLUG}}.html">
+          <span class="dir">Previous paper</span>
+          <span class="label">{{PREV_TITLE}}</span>
+        </a>
+        <a class="is-next" href="/publications/{{NEXT_SLUG}}.html">
+          <span class="dir">Next paper</span>
+          <span class="label">{{NEXT_TITLE}}</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <div class="shell">
+    <footer class="site-footer">
+      <p>&copy; 2026 Shunqi Lu</p>
+      <div class="footer-links">
+        <a href="/">About</a>
+        <a href="/#papers">Papers</a>
+        <a href="mailto:32023210246@cueb.edu.cn">Email</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>

@@ -4,16 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Completing the classification of maximum scattered linear sets in PG(1, q^5) | Shunqi Lu</title>
-  <meta name="description" content="The classification of maximum scattered linear sets in PG(1,q⁵). Read the full preprint, abstract, and reproducibility code.">
+  <meta name="description" content="The classification of maximum scattered Fq-linear sets in PG(1,q^5) is completed: the two residual families are excluded for every prime power q. Abstract, keywords, key contributions, PDF, and code.">
   <meta name="author" content="Shunqi Lu">
+  <meta name="keywords" content="maximum scattered linear set, linearized polynomial, rank-metric code, Grassmannian, Pfaffian curve">
   <meta property="og:site_name" content="Shunqi Lu">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fdfcf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161614" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://shunqilu.github.io/publications/maximum-scattered-linear-sets-pg1q5.html">
   <link rel="preload" href="/assets/fonts/crimson-pro-roman.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/atkinson-hyperlegible-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=20260913-minimal">
-  <link rel="icon" href="/assets/favicon.svg?v=20260913-minimal" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css?v=20260914-sfogliato">
+  <link rel="stylesheet" href="/assets/style.css?v=20260914-sfogliato">
+  <link rel="icon" href="/assets/favicon.svg?v=20260914-sfogliato" type="image/svg+xml">
+  <!-- KaTeX is vendored, so formulae do not depend on a third-party host. Both
+       files must load before site.js, which calls the auto-render extension. -->
+  <script src="/assets/katex/katex.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/katex/auto-render.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/site.js?v=20260914-sfogliato" defer></script>
   <meta name="citation_title" content="Completing the classification of maximum scattered linear sets in PG(1, q^5)">
   <meta name="citation_author" content="Shunqi Lu">
   <meta name="citation_publication_date" content="2026/09/01">
@@ -21,40 +29,162 @@
   <meta name="citation_doi" content="10.5281/zenodo.22232593">
   <meta name="citation_language" content="en">
   <meta name="citation_abstract_html_url" content="https://shunqilu.github.io/publications/maximum-scattered-linear-sets-pg1q5.html">
+  <meta name="citation_keywords" content="maximum scattered linear set; linearized polynomial; rank-metric code; Grassmannian; Pfaffian curve">
 </head>
-<body class="paper-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="wrapper">
-    <header class="profile">
-      <div class="profile-identity">
-        <p class="profile-name"><a href="/">Shunqi Lu<span class="name-period" aria-hidden="true">.</span></a></p>
-        <p class="affiliation">School of Artificial Intelligence<br><span>Capital University of Economics and Business</span></p>
-      </div>
-      <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="/">About</a><a class="nav-link" href="/publications/" aria-current="page">Publications</a></nav>
-      <div class="profile-contact">
-        <a class="email-link" href="mailto:32023210246@cueb.edu.cn">32023210246@cueb.edu.cn</a>
-        <div class="external-links"><a href="https://github.com/ShunqiLu" rel="me">GitHub <span aria-hidden="true">↗</span></a><a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </header>
-    <div class="content-column">
-      <main id="main">
-    <article class="article-wrap">
-      <a class="back-link" href="/publications/">← All publications</a>
-      <header class="article-header">
-        <p class="eyebrow">Finite geometry · Rank-metric codes</p>
-        <h1 class="article-title">Completing the classification of maximum scattered linear sets in PG(1, q<sup>5</sup>)</h1>
-        <p class="authors"><a href="/">Shunqi Lu</a></p>
-        <p class="paper-meta">Preprint · Version 1 · <time datetime="2026-09-01">2026-09-01</time> · <a href="https://doi.org/10.5281/zenodo.22232593">DOI: 10.5281/zenodo.22232593</a></p>
-      </header>
-      <section class="abstract" aria-labelledby="abstract-heading"><h2 id="abstract-heading">Abstract</h2>
-        <p>We complete the classification of maximum scattered 𝔽<sub>q</sub>-linear sets in PG(1, <i>q</i><sup>5</sup>) up to PΓL(2, <i>q</i><sup>5</sup>)-equivalence. Lia, Longobardi and Zanella reduced the problem to the pseudoregulus and LP-type families together with two residual candidate families, denoted (C3) and (C4), previously excluded only for <i>q</i> ≤ 25. We prove that neither residual family contains a maximum scattered linear set for any prime power <i>q</i>. Consequently, every maximum scattered 𝔽<sub>q</sub>-linear set in PG(1, <i>q</i><sup>5</sup>) is equivalent to a member of the pseudoregulus or LP-type family.</p><p>The proof encodes collisions as rational points on linear sections of Gr(2, 5), uses a finite-extension point-count identity to pass to dual collision sections, and analyzes the resulting degree-five Pfaffian curves through their Frobenius orbits and tangent lines.</p>
-      </section>
-      <div class="resource-links"><a class="button-link" href="/publications/classification_maximum_scattered_linear_sets_PG1q5.pdf" type="application/pdf">Read full paper (PDF)</a><a href="https://github.com/ShunqiLu/maximum-scattered-linear-sets-pg1q5">Reproducibility code ↗</a><a href="https://doi.org/10.5281/zenodo.22232593">Zenodo record ↗</a></div>
-      
-      <section class="citation" aria-labelledby="citation-heading"><h2 id="citation-heading">Citation</h2><blockquote>Shunqi Lu. (2026). Completing the classification of maximum scattered linear sets in PG(1, q^5) (v1). Zenodo. https://doi.org/10.5281/zenodo.22232593</blockquote></section>
-    </article></main>
-      <footer class="site-footer"><p>© 2026 Shunqi Lu. All rights reserved.</p><a href="/publications/">Publications</a></footer>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <p class="mast-name"><a href="/">Shunqi Lu<span class="dot" aria-hidden="true">.</span></a></p>
+      <nav class="mast-nav" aria-label="Main navigation">
+        <a href="/">About</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+        <a href="https://github.com/ShunqiLu" rel="me">GitHub</a>
+      </nav>
     </div>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <a class="back-link" href="/#papers"><span class="arrow" aria-hidden="true">&larr;</span> All papers</a>
+
+      <header>
+        <div class="article-tagline">
+          <p class="eyebrow">Finite geometry</p>
+          <p class="badge">Preprint</p>
+        </div>
+        <h1 class="article-title">Completing the classification of maximum scattered linear sets in \(\mathrm{PG}(1, q^5)\)</h1>
+        <p class="authors"><a href="/">Shunqi Lu</a></p>
+        <dl class="fact-grid">
+          <div>
+            <dt>Type</dt>
+            <dd>Preprint</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd><time datetime="2026-09-01">1 September 2026</time></dd>
+          </div>
+          <div>
+            <dt>Version</dt>
+            <dd>v1 &middot; Zenodo</dd>
+          </div>
+          <div>
+            <dt>DOI</dt>
+            <dd><a href="https://doi.org/10.5281/zenodo.22232593">10.5281/zenodo.22232593</a></dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/ShunqiLu/maximum-scattered-linear-sets-pg1q5">GitHub repository</a></dd>
+          </div>
+        </dl>
+      </header>
+
+      <!-- Abstract, keywords, and key contributions are taken from the paper itself.
+           Formulae are LaTeX between \( and \), typeset by KaTeX; every symbol and
+           every numeral belonging to an expression sits inside the delimiters so
+           the whole expression is set in one face. Prose stays pure ASCII, with
+           character entities for the few non-ASCII marks. -->
+      <section class="block" aria-labelledby="abstract-heading">
+        <div class="block-head"><h2 id="abstract-heading">Abstract</h2></div>
+        <div class="abstract">
+          <p>We complete the classification of maximum scattered \(\mathbb{F}_q\)-linear sets in \(\mathrm{PG}(1, q^5)\) up to \(\mathrm{P}\Gamma\mathrm{L}(2, q^5)\)-equivalence. Lia, Longobardi and Zanella reduced the problem to the pseudoregulus and LP-type families together with two residual candidate families, denoted (C3) and (C4), previously excluded only for \(q \le 25\). We prove that neither residual family contains a maximum scattered linear set for any prime power \(q\). Consequently, every maximum scattered \(\mathbb{F}_q\)-linear set in \(\mathrm{PG}(1, q^5)\) is equivalent to a member of the pseudoregulus or LP-type family.</p>
+          <p>The proof encodes collisions as rational points on linear sections of \(\mathrm{Gr}(2, 5)\), uses a finite-extension point-count identity to pass to dual collision sections, and analyzes the resulting degree-five Pfaffian curves through their Frobenius orbits and tangent lines.</p>
+        </div>
+        <div class="resources">
+          <a class="btn btn-primary" href="/publications/classification_maximum_scattered_linear_sets_PG1q5.pdf" type="application/pdf">Read full paper (PDF) <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://github.com/ShunqiLu/maximum-scattered-linear-sets-pg1q5">Reproducibility code <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://doi.org/10.5281/zenodo.22232593">Zenodo record <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+      </section>
+
+      <section class="block" aria-labelledby="keywords-heading">
+        <div class="block-head"><h2 id="keywords-heading">Keywords</h2></div>
+        <ul class="tag-list is-roomy">
+          <li>Maximum scattered linear set</li>
+          <li>Linearized polynomial</li>
+          <li>Rank-metric code</li>
+          <li>Grassmannian</li>
+          <li>Pfaffian curve</li>
+        </ul>
+        <p class="msc"><span>MSC 2020 &mdash;</span> 51E20 &middot; 11T06 &middot; 14M15 &middot; 94B27</p>
+      </section>
+
+      <!-- One item per numbered result of the paper; the reference says which. -->
+      <section class="block" aria-labelledby="keypoints-heading">
+        <div class="block-head"><h2 id="keypoints-heading">Key contributions</h2></div>
+        <ol class="keypoints">
+          <li>
+            <div>
+              <strong>The classification is completed <span class="ref">Theorem 1.1</span></strong>
+              <p>For every prime power \(q\), every maximum scattered \(\mathbb{F}_q\)-linear set in \(\mathrm{PG}(1, q^5)\) is \(\mathrm{P}\Gamma\mathrm{L}(2, q^5)\)-equivalent to \(L_{x^q}\) or to \(L_{x^{q^s} + \delta x^{q^{5-s}}}\) with \(s \in \{1, 2\}\) and \(N(\delta) \notin \{0, 1\}\): the pseudoregulus and LP-type families. No member of either residual family, (C3) or (C4), is maximum scattered.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>An MRD code is shown nonextendable <span class="ref">Corollary 1.2</span></strong>
+              <p>If \(U_\delta = \{(x, x^q + \delta x^{q^4}) : \mathrm{Tr}(x) = 0\}\) is scattered, then it is maximal with respect to inclusion among scattered \(\mathbb{F}_q\)-subspaces of \(K^2\); equivalently, its associated \([4, 2, 3]_{q^5/q}\) MRD code is nonextendable.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>A primal&ndash;dual point-count identity <span class="ref">Section 2</span></strong>
+              <p>Collisions are encoded as rational points on a linear section \(\mathcal{C}\) of \(\mathrm{Gr}(2, 5)\), and a rank-stratified incidence count gives \(\#\mathcal{C}(E) = \#\mathcal{D}(E)\) over every finite extension \(E/\mathbb{F}_q\). The direct proof also covers characteristic two and sections without smoothness or expected-dimension hypotheses.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>A Pfaffian tangent criterion <span class="ref">Section 3</span></strong>
+              <p>In each collision model the dual section is a height-three Pfaffian curve of degree five and arithmetic genus one. For a point-free section, the component through each point of a distinguished Frobenius orbit is the corresponding tangent line, and evaluation on those lines yields the reductions of (C3) and (C4).</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" aria-labelledby="cite-heading">
+        <div class="block-head"><h2 id="cite-heading">Cite this preprint</h2></div>
+        <div class="bib">
+          <div class="bib-head">
+            <p>BibTeX</p>
+            <button class="copy-btn" type="button" data-copy-target="#bib-scattered" hidden>Copy</button>
+          </div>
+          <pre id="bib-scattered"><code>@misc{lu2026scattered,
+  author    = {Shunqi Lu},
+  title     = {Completing the classification of maximum scattered
+               linear sets in $\mathrm{PG}(1,q^5)$},
+  year      = {2026},
+  version   = {v1},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22232593},
+  url       = {https://doi.org/10.5281/zenodo.22232593}
+}</code></pre>
+        </div>
+        <p class="cite-plain">Shunqi Lu. (2026). <i>Completing the classification of maximum scattered linear sets in PG(1, q^5)</i> (v1). Zenodo. https://doi.org/10.5281/zenodo.22232593</p>
+      </section>
+
+      <nav class="paper-nav" aria-label="Other papers">
+        <a href="/publications/sharp-closure-thresholds.html">
+          <span class="dir">Previous paper</span>
+          <span class="label">Sharp closure thresholds for two-hidden-layer ReLU networks</span>
+        </a>
+        <a class="is-next" href="/publications/covariogram-balancing.html">
+          <span class="dir">Next paper</span>
+          <span class="label">Exact coordinate-balancing calculus and sharp stability</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <div class="shell">
+    <footer class="site-footer">
+      <p>&copy; 2026 Shunqi Lu</p>
+      <div class="footer-links">
+        <a href="/">About</a>
+        <a href="/#papers">Papers</a>
+        <a href="mailto:32023210246@cueb.edu.cn">Email</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

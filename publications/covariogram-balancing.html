@@ -3,58 +3,183 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Exact Coordinate-Balancing Calculus and Sharp Stability for Symmetric Lattice Cross-Covariograms | Shunqi Lu</title>
-  <meta name="description" content="Coordinate balancing, equality certificates, and sharp stability for symmetric lattice cross-covariograms. Read the full preprint, abstract, and reproducibility code.">
+  <title>Exact coordinate-balancing calculus and sharp stability for symmetric lattice cross-covariograms | Shunqi Lu</title>
+  <meta name="description" content="Balancing the coordinates of a shift along a fixed l1 shell never decreases lattice overlap: the exact transfer calculus, the sharp constant for Lee balls, and the minimizing orbits. Abstract, keywords, key contributions, PDF, and code.">
   <meta name="author" content="Shunqi Lu">
+  <meta name="keywords" content="lattice cross-covariogram, majorization, hyperoctahedral symmetry, Lee balls, discrete rearrangement, quantitative stability">
   <meta property="og:site_name" content="Shunqi Lu">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fdfcf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161614" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://shunqilu.github.io/publications/covariogram-balancing.html">
   <link rel="preload" href="/assets/fonts/crimson-pro-roman.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/atkinson-hyperlegible-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=20260913-minimal">
-  <link rel="icon" href="/assets/favicon.svg?v=20260913-minimal" type="image/svg+xml">
-  <meta name="citation_title" content="Exact Coordinate-Balancing Calculus and Sharp Stability for Symmetric Lattice Cross-Covariograms">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css?v=20260914-sfogliato">
+  <link rel="stylesheet" href="/assets/style.css?v=20260914-sfogliato">
+  <link rel="icon" href="/assets/favicon.svg?v=20260914-sfogliato" type="image/svg+xml">
+  <!-- KaTeX is vendored, so formulae do not depend on a third-party host. Both
+       files must load before site.js, which calls the auto-render extension. -->
+  <script src="/assets/katex/katex.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/katex/auto-render.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/site.js?v=20260914-sfogliato" defer></script>
+  <meta name="citation_title" content="Exact coordinate-balancing calculus and sharp stability for symmetric lattice cross-covariograms">
   <meta name="citation_author" content="Shunqi Lu">
   <meta name="citation_publication_date" content="2026/08/31">
   <meta name="citation_pdf_url" content="https://shunqilu.github.io/publications/covariogram-balancing.pdf">
   <meta name="citation_doi" content="10.5281/zenodo.22178367">
   <meta name="citation_language" content="en">
   <meta name="citation_abstract_html_url" content="https://shunqilu.github.io/publications/covariogram-balancing.html">
+  <meta name="citation_keywords" content="lattice cross-covariogram; majorization; hyperoctahedral symmetry; Lee balls; discrete rearrangement; quantitative stability">
 </head>
-<body class="paper-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="wrapper">
-    <header class="profile">
-      <div class="profile-identity">
-        <p class="profile-name"><a href="/">Shunqi Lu<span class="name-period" aria-hidden="true">.</span></a></p>
-        <p class="affiliation">School of Artificial Intelligence<br><span>Capital University of Economics and Business</span></p>
-      </div>
-      <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="/">About</a><a class="nav-link" href="/publications/" aria-current="page">Publications</a></nav>
-      <div class="profile-contact">
-        <a class="email-link" href="mailto:32023210246@cueb.edu.cn">32023210246@cueb.edu.cn</a>
-        <div class="external-links"><a href="https://github.com/ShunqiLu" rel="me">GitHub <span aria-hidden="true">↗</span></a><a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </header>
-    <div class="content-column">
-      <main id="main">
-    <article class="article-wrap">
-      <a class="back-link" href="/publications/">← All publications</a>
-      <header class="article-header">
-        <p class="eyebrow">Discrete geometry · Quantitative stability</p>
-        <h1 class="article-title">Exact Coordinate-Balancing Calculus and Sharp Stability for Symmetric Lattice Cross-Covariograms</h1>
-        <p class="authors"><a href="/">Shunqi Lu</a></p>
-        <p class="paper-meta">Preprint · Version 1 · <time datetime="2026-08-31">2026-08-31</time> · <a href="https://doi.org/10.5281/zenodo.22178367">DOI: 10.5281/zenodo.22178367</a></p>
-      </header>
-      <section class="abstract" aria-labelledby="abstract-heading"><h2 id="abstract-heading">Abstract</h2>
-        <p>For finite <i>A</i>, <i>B</i> ⊂ ℤ<sup>d</sup>, write <i>g</i><sub>A,B</sub>(<i>u</i>) = |<i>A</i> ∩ (<i>B</i> − <i>u</i>)|. We study how this cross-covariogram varies as the coordinates of <i>u</i> are balanced along a fixed ℓ<sub>1</sub> shell. A centered exchange-fiber property, satisfied by lattice sections of compact convex sets invariant under signed coordinate permutations, decomposes every unit balancing transfer into parity-fiber endpoint exposures in {0, 1}, yielding the Schur order on each shell and a fiberwise equality certificate for comparable shifts. For equal Lee balls of radius <i>t</i> in dimension <i>d</i> ≥ 3 and comparable shifts on an active shell 2 ≤ <i>s</i> ≤ 2<i>t</i>, the overlap deficit is at least a closed-form constant times the number of unit transfers; a central-box section theorem evaluates it in lower-dimensional Lee-ball counts. Incomparable shifts may share a value, so equality is order-theoretic. The extremizers are characterized for 4 ≤ <i>s</i> ≤ 2<i>t</i>: each interior shell carries exactly ⌊<i>s</i>/2⌋ − 1 balanced-gap minimizing orbits, independently of <i>d</i> and <i>t</i>, with equality only across single such transfers; the two outermost shells form a boundary family. A structural theorem evaluates the sharp layer in every dimension for the Minkowski interpolants <i>C</i><sub>d</sub> + <i>bB</i><sup>d</sup><sub>∞</sub> between cross-polytope and cube: the constant is determined by lattice-point counts of the same body two dimensions down, plus an explicit facet surcharge for transfers into a zero coordinate, and one inequality decides the minimizing transfer. Cubes and Lee balls are its degenerate regimes. Convex hyperoctahedral symmetry thus fixes the transfer sign but neither the sharp scale nor the minimizing orbit; reversals occur once convexity or coordinate-permutation symmetry fails.</p>
-      </section>
-      <div class="resource-links"><a class="button-link" href="/publications/covariogram-balancing.pdf" type="application/pdf">Read full paper (PDF)</a><a href="https://github.com/ShunqiLu/covariogram-balancing">Reproducibility code ↗</a><a href="https://doi.org/10.5281/zenodo.22178367">Zenodo record ↗</a></div>
-      <p class="supplement"><a href="/publications/online_resource_crypto.pdf" type="application/pdf">Supplementary appendix (PDF)</a> · Cryptographic supplementary material.</p>
-      <section class="citation" aria-labelledby="citation-heading"><h2 id="citation-heading">Citation</h2><blockquote>Shunqi Lu. (2026). Exact Coordinate-Balancing Calculus and Sharp Stability for Symmetric Lattice Cross-Covariograms (v1). Zenodo. https://doi.org/10.5281/zenodo.22178367</blockquote></section>
-    </article></main>
-      <footer class="site-footer"><p>© 2026 Shunqi Lu. All rights reserved.</p><a href="/publications/">Publications</a></footer>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <p class="mast-name"><a href="/">Shunqi Lu<span class="dot" aria-hidden="true">.</span></a></p>
+      <nav class="mast-nav" aria-label="Main navigation">
+        <a href="/">About</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+        <a href="https://github.com/ShunqiLu" rel="me">GitHub</a>
+      </nav>
     </div>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <a class="back-link" href="/#papers"><span class="arrow" aria-hidden="true">&larr;</span> All papers</a>
+
+      <header>
+        <div class="article-tagline">
+          <p class="eyebrow">Discrete geometry</p>
+          <p class="badge">Preprint</p>
+        </div>
+        <h1 class="article-title">Exact coordinate-balancing calculus and sharp stability for symmetric lattice cross-covariograms</h1>
+        <p class="authors"><a href="/">Shunqi Lu</a></p>
+        <dl class="fact-grid">
+          <div>
+            <dt>Type</dt>
+            <dd>Preprint</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd><time datetime="2026-08-31">31 August 2026</time></dd>
+          </div>
+          <div>
+            <dt>Version</dt>
+            <dd>v1 &middot; Zenodo</dd>
+          </div>
+          <div>
+            <dt>DOI</dt>
+            <dd><a href="https://doi.org/10.5281/zenodo.22178367">10.5281/zenodo.22178367</a></dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/ShunqiLu/covariogram-balancing">GitHub repository</a></dd>
+          </div>
+        </dl>
+      </header>
+
+      <!-- Abstract, keywords, and key contributions are taken from the paper itself.
+           Formulae are LaTeX between \( and \), typeset by KaTeX; every symbol and
+           every numeral belonging to an expression sits inside the delimiters so
+           the whole expression is set in one face. Prose stays pure ASCII, with
+           character entities for the few non-ASCII marks. -->
+      <section class="block" aria-labelledby="abstract-heading">
+        <div class="block-head"><h2 id="abstract-heading">Abstract</h2></div>
+        <div class="abstract">
+          <p>For finite \(A, B \subset \mathbb{Z}^d\), write \(g_{A,B}(u) = |A \cap (B - u)|\). We study how this cross-covariogram varies as the coordinates of \(u\) are balanced along a fixed \(\ell_1\) shell. A centered exchange-fiber property, satisfied by lattice sections of compact convex sets invariant under signed coordinate permutations, decomposes every unit balancing transfer into parity-fiber endpoint exposures in \(\{0, 1\}\), yielding the Schur order on each shell and a fiberwise equality certificate for comparable shifts. For equal Lee balls of radius \(t\) in dimension \(d \ge 3\) and comparable shifts on an active shell \(2 \le s \le 2t\), the overlap deficit is at least a closed-form constant times the number of unit transfers; a central-box section theorem evaluates it in lower-dimensional Lee-ball counts. Incomparable shifts may share a value, so equality is order-theoretic. The extremizers are characterized for \(4 \le s \le 2t\): each interior shell carries exactly \(\lfloor s/2 \rfloor - 1\) balanced-gap minimizing orbits, independently of \(d\) and \(t\), with equality only across single such transfers; the two outermost shells form a boundary family. A structural theorem evaluates the sharp layer in every dimension for the Minkowski interpolants \(C_d + bB^d_\infty\) between cross-polytope and cube: the constant is determined by lattice-point counts of the same body two dimensions down, plus an explicit facet surcharge for transfers into a zero coordinate, and one inequality decides the minimizing transfer. Cubes and Lee balls are its degenerate regimes. Convex hyperoctahedral symmetry thus fixes the transfer sign but neither the sharp scale nor the minimizing orbit; reversals occur once convexity or coordinate-permutation symmetry fails.</p>
+        </div>
+        <div class="resources">
+          <a class="btn btn-primary" href="/publications/covariogram-balancing.pdf" type="application/pdf">Read full paper (PDF) <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://github.com/ShunqiLu/covariogram-balancing">Reproducibility code <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://doi.org/10.5281/zenodo.22178367">Zenodo record <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
+        <p class="supplement"><a href="/publications/online_resource_crypto.pdf" type="application/pdf">Supplementary appendix (PDF)</a> &middot; Cryptographic supplementary material.</p>
+      </section>
+
+      <section class="block" aria-labelledby="keywords-heading">
+        <div class="block-head"><h2 id="keywords-heading">Keywords</h2></div>
+        <ul class="tag-list is-roomy">
+          <li>Lattice cross-covariogram</li>
+          <li>Majorization</li>
+          <li>Hyperoctahedral symmetry</li>
+          <li>Lee balls</li>
+          <li>Discrete rearrangement</li>
+          <li>Quantitative stability</li>
+        </ul>
+        <p class="msc"><span>MSC &mdash;</span> 52C07 &middot; 11H06 &middot; 52B20 &middot; 05A20</p>
+      </section>
+
+      <!-- The three contributions the paper states in its own Section 1.1. -->
+      <section class="block" aria-labelledby="keypoints-heading">
+        <div class="block-head"><h2 id="keypoints-heading">Key contributions</h2></div>
+        <ol class="keypoints">
+          <li>
+            <div>
+              <strong>Universal parity-exact transfer calculus <span class="ref">Theorem 3.4</span></strong>
+              <p>A centered exchange fiber has an explicit endpoint exposure in \(\{0, 1\}\). Summing these exposures proves fixed-shell majorization and a fiberwise equality certificate for any pair of hyperoctahedrally invariant compact convex lattice sections.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Sharp Lee stability, classification, and radial equality <span class="ref">Section 4</span></strong>
+              <p>For unequal Lee balls the full two-parity kernel and residual convolution are derived. For equal balls in dimension \(d \ge 3\), a central-box theorem evaluates the exact active-shell stability constant by an even&ndash;odd formula in lower-dimensional Lee-ball counts; a classification theorem lists all minimizing arcs for \(4 \le s \le 2t\) &mdash; on interior shells exactly the \(\lfloor s/2 \rfloor - 1\) balanced-gap axial transfers, a count independent of \(d \ge 3\) and \(t\) &mdash; and a rigidity theorem characterizes all pairs attaining equality in the stability inequality, confining them on interior shells to single arcs.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>A structural theorem with an exact facet threshold <span class="ref">Theorem 6.4</span></strong>
+              <p>For the interpolating family \(C_d + bB^d_\infty\) in every dimension, a master kernel reduces each arc weight to a lower-dimensional lattice-point count plus an explicit facet surcharge carried only by transfers into a zero coordinate. This evaluates the sharp constant and the minimizing orbit on every shell below the boundary layer, and locates the exact threshold \(\Delta_{d,b}(s) = 0\) at which the minimizing orbit changes. Integer cubes and equal Lee balls are the two degenerate regimes of the same mechanism, with, respectively, one and \(\lfloor s/2 \rfloor - 1\) minimizing arcs. Capped cross-polytopes add an exact magnitude crossover, and counterexamples exhibit sign reversals once convexity or coordinate-permutation symmetry is removed from the sufficient hypothesis.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" aria-labelledby="cite-heading">
+        <div class="block-head"><h2 id="cite-heading">Cite this preprint</h2></div>
+        <div class="bib">
+          <div class="bib-head">
+            <p>BibTeX</p>
+            <button class="copy-btn" type="button" data-copy-target="#bib-covariogram" hidden>Copy</button>
+          </div>
+          <pre id="bib-covariogram"><code>@misc{lu2026covariogram,
+  author    = {Shunqi Lu},
+  title     = {Exact coordinate-balancing calculus and sharp stability
+               for symmetric lattice cross-covariograms},
+  year      = {2026},
+  version   = {v1},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22178367},
+  url       = {https://doi.org/10.5281/zenodo.22178367}
+}</code></pre>
+        </div>
+        <p class="cite-plain">Shunqi Lu. (2026). <i>Exact Coordinate-Balancing Calculus and Sharp Stability for Symmetric Lattice Cross-Covariograms</i> (v1). Zenodo. https://doi.org/10.5281/zenodo.22178367</p>
+      </section>
+
+      <nav class="paper-nav" aria-label="Other papers">
+        <a href="/publications/maximum-scattered-linear-sets-pg1q5.html">
+          <span class="dir">Previous paper</span>
+          <span class="label">Completing the classification of maximum scattered linear sets in \(\mathrm{PG}(1, q^5)\)</span>
+        </a>
+        <a class="is-next" href="/publications/sharp-closure-thresholds.html">
+          <span class="dir">Also available</span>
+          <span class="label">Sharp closure thresholds for two-hidden-layer ReLU networks</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <div class="shell">
+    <footer class="site-footer">
+      <p>&copy; 2026 Shunqi Lu</p>
+      <div class="footer-links">
+        <a href="/">About</a>
+        <a href="/#papers">Papers</a>
+        <a href="mailto:32023210246@cueb.edu.cn">Email</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>

@@ -4,16 +4,24 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Sharp closure thresholds for two-hidden-layer ReLU networks | Shunqi Lu</title>
-  <meta name="description" content="Sharp width thresholds for approximation by two-hidden-layer ReLU networks. Read the full preprint, abstract, and reproducibility code.">
+  <meta name="description" content="The exact first hidden width needed to approximate the coordinate maximum in L2 by a two-hidden-layer ReLU network, with abstract, keywords, key contributions, PDF, and reproducibility code.">
   <meta name="author" content="Shunqi Lu">
+  <meta name="keywords" content="ReLU networks, fixed-architecture closure, nonlinear approximation, ordered aggregation, width complexity, polyhedral fans">
   <meta property="og:site_name" content="Shunqi Lu">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#ffffff">
+  <meta name="theme-color" content="#fdfcf9" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#161614" media="(prefers-color-scheme: dark)">
   <link rel="canonical" href="https://shunqilu.github.io/publications/sharp-closure-thresholds.html">
   <link rel="preload" href="/assets/fonts/crimson-pro-roman.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/atkinson-hyperlegible-regular.woff2" as="font" type="font/woff2" crossorigin>
-  <link rel="stylesheet" href="/assets/style.css?v=20260913-minimal">
-  <link rel="icon" href="/assets/favicon.svg?v=20260913-minimal" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/katex/katex.min.css?v=20260914-sfogliato">
+  <link rel="stylesheet" href="/assets/style.css?v=20260914-sfogliato">
+  <link rel="icon" href="/assets/favicon.svg?v=20260914-sfogliato" type="image/svg+xml">
+  <!-- KaTeX is vendored, so formulae do not depend on a third-party host. Both
+       files must load before site.js, which calls the auto-render extension. -->
+  <script src="/assets/katex/katex.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/katex/auto-render.min.js?v=20260914-sfogliato" defer></script>
+  <script src="/assets/site.js?v=20260914-sfogliato" defer></script>
   <meta name="citation_title" content="Sharp closure thresholds for two-hidden-layer ReLU networks">
   <meta name="citation_author" content="Shunqi Lu">
   <meta name="citation_publication_date" content="2026/09/13">
@@ -21,40 +29,167 @@
   <meta name="citation_doi" content="10.5281/zenodo.22728502">
   <meta name="citation_language" content="en">
   <meta name="citation_abstract_html_url" content="https://shunqilu.github.io/publications/sharp-closure-thresholds.html">
+  <meta name="citation_keywords" content="ReLU networks; fixed-architecture closure; nonlinear approximation; ordered aggregation; width complexity; polyhedral fans">
 </head>
-<body class="paper-page">
+<body>
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="wrapper">
-    <header class="profile">
-      <div class="profile-identity">
-        <p class="profile-name"><a href="/">Shunqi Lu<span class="name-period" aria-hidden="true">.</span></a></p>
-        <p class="affiliation">School of Artificial Intelligence<br><span>Capital University of Economics and Business</span></p>
-      </div>
-      <nav class="main-nav" aria-label="Main navigation"><a class="nav-link" href="/">About</a><a class="nav-link" href="/publications/" aria-current="page">Publications</a></nav>
-      <div class="profile-contact">
-        <a class="email-link" href="mailto:32023210246@cueb.edu.cn">32023210246@cueb.edu.cn</a>
-        <div class="external-links"><a href="https://github.com/ShunqiLu" rel="me">GitHub <span aria-hidden="true">↗</span></a><a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID <span aria-hidden="true">↗</span></a></div>
-      </div>
-    </header>
-    <div class="content-column">
-      <main id="main">
-    <article class="article-wrap">
-      <a class="back-link" href="/publications/">← All publications</a>
-      <header class="article-header">
-        <p class="eyebrow">Approximation theory · Neural networks</p>
+
+  <header class="masthead">
+    <div class="shell masthead-inner">
+      <p class="mast-name"><a href="/">Shunqi Lu<span class="dot" aria-hidden="true">.</span></a></p>
+      <nav class="mast-nav" aria-label="Main navigation">
+        <a href="/">About</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+        <a href="https://github.com/ShunqiLu" rel="me">GitHub</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <article class="article">
+      <a class="back-link" href="/#papers"><span class="arrow" aria-hidden="true">&larr;</span> All papers</a>
+
+      <header>
+        <div class="article-tagline">
+          <p class="eyebrow">Machine learning</p>
+          <p class="badge">Preprint</p>
+        </div>
         <h1 class="article-title">Sharp closure thresholds for two-hidden-layer ReLU networks</h1>
         <p class="authors"><a href="/">Shunqi Lu</a></p>
-        <p class="paper-meta">Preprint · Version 1 · <time datetime="2026-09-13">2026-09-13</time> · <a href="https://doi.org/10.5281/zenodo.22728502">DOI: 10.5281/zenodo.22728502</a></p>
+        <dl class="fact-grid">
+          <div>
+            <dt>Type</dt>
+            <dd>Preprint</dd>
+          </div>
+          <div>
+            <dt>Date</dt>
+            <dd><time datetime="2026-09-13">13 September 2026</time></dd>
+          </div>
+          <div>
+            <dt>Version</dt>
+            <dd>v1 &middot; Zenodo</dd>
+          </div>
+          <div>
+            <dt>DOI</dt>
+            <dd><a href="https://doi.org/10.5281/zenodo.22728502">10.5281/zenodo.22728502</a></dd>
+          </div>
+          <div>
+            <dt>Code</dt>
+            <dd><a href="https://github.com/ShunqiLu/fan-localization-triple-junctions">GitHub repository</a></dd>
+          </div>
+        </dl>
       </header>
-      <section class="abstract" aria-labelledby="abstract-heading"><h2 id="abstract-heading">Abstract</h2>
-        <p>We determine the minimum first hidden width needed to approximate the coordinate maximum by a fixed two-hidden-layer ReLU architecture with unrestricted parameters in <i>L</i><sup>2</sup>. In dimension <i>d</i> ≥ 14, the threshold is κ<sub>d</sub> = <math xmlns="http://www.w3.org/1998/Math/MathML" aria-label="d choose 2"><mrow><mo>(</mo><mfrac linethickness="0"><mi>d</mi><mn>2</mn></mfrac><mo>)</mo></mrow></math> − ⌊<i>d</i><sup>2</sup>/4⌋. The same value holds for ordered <i>L</i>-statistics whose weights have a nonzero discrete second difference. A fan-localization theorem assembles cellwise ridge formulas across a finite hyperplane arrangement, using a fixed finite second layer and output map. A complementary pair-transversal bound turns stable triple junctions into first-layer lower bounds. Its quantitative form is uniform over all weights, biases, and coefficients. The threshold proof is analytic for <i>d</i> ≥ 40. Smaller dimensions use stored tournament masks for block sizes 7 ≤ <i>n</i> ≤ 13 and exact integer existence bounds for 14 ≤ <i>n</i> ≤ 19. For the maximum, the critical construction has second width exp(<i>O</i>(<i>d</i> log <i>d</i>)) and converges in every finite <i>L</i><sup>p</sup>, with an explicit parameter–error rate. The common closure width is asymptotic to <i>d</i><sup>2</sup>/4, whereas exact realization requires first width at least (1/2 − <i>o</i>(1))<i>d</i><sup>2</sup>. At the critical first width, the constructed architecture therefore has zero approximation-error infimum with no finite-parameter minimizer.</p>
+
+      <!-- Abstract, keywords, and key contributions are taken from the paper itself.
+           Formulae are LaTeX between \( and \), typeset by KaTeX; every symbol and
+           every numeral belonging to an expression sits inside the delimiters so
+           the whole expression is set in one face. Prose stays pure ASCII, with
+           character entities for the few non-ASCII marks. -->
+      <section class="block" aria-labelledby="abstract-heading">
+        <div class="block-head"><h2 id="abstract-heading">Abstract</h2></div>
+        <div class="abstract">
+          <p>We determine the minimum first hidden width needed to approximate the coordinate maximum by a fixed two-hidden-layer ReLU architecture with unrestricted parameters in \(L^2\). In dimension \(d \ge 14\), the threshold is \(\kappa_d = \binom{d}{2} - \lfloor d^2/4 \rfloor\). The same value holds for ordered \(L\)-statistics whose weights have a nonzero discrete second difference. A fan-localization theorem assembles cellwise ridge formulas across a finite hyperplane arrangement, using a fixed finite second layer and output map. A complementary pair-transversal bound turns stable triple junctions into first-layer lower bounds. Its quantitative form is uniform over all weights, biases, and coefficients. The threshold proof is analytic for \(d \ge 40\). Smaller dimensions use stored tournament masks for block sizes \(7 \le n \le 13\) and exact integer existence bounds for \(14 \le n \le 19\). For the maximum, the critical construction has second width \(\exp(O(d \log d))\) and converges in every finite \(L^p\), with an explicit parameter&ndash;error rate. The common closure width is asymptotic to \(d^2/4\), whereas exact realization requires first width at least \((1/2 - o(1))d^2\). At the critical first width, the constructed architecture therefore has zero approximation-error infimum with no finite-parameter minimizer.</p>
+        </div>
+        <div class="resources">
+          <a class="btn btn-primary" href="/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf" type="application/pdf">Read full paper (PDF) <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://github.com/ShunqiLu/fan-localization-triple-junctions">Reproducibility code <span class="arrow" aria-hidden="true">&#8599;</span></a>
+          <a class="btn" href="https://doi.org/10.5281/zenodo.22728502">Zenodo record <span class="arrow" aria-hidden="true">&#8599;</span></a>
+        </div>
       </section>
-      <div class="resource-links"><a class="button-link" href="/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf" type="application/pdf">Read full paper (PDF)</a><a href="https://github.com/ShunqiLu/fan-localization-triple-junctions">Reproducibility code ↗</a><a href="https://doi.org/10.5281/zenodo.22728502">Zenodo record ↗</a></div>
-      
-      <section class="citation" aria-labelledby="citation-heading"><h2 id="citation-heading">Citation</h2><blockquote>Shunqi Lu. (2026). Sharp closure thresholds for two-hidden-layer ReLU networks (v1). Zenodo. https://doi.org/10.5281/zenodo.22728502</blockquote></section>
-    </article></main>
-      <footer class="site-footer"><p>© 2026 Shunqi Lu. All rights reserved.</p><a href="/publications/">Publications</a></footer>
-    </div>
+
+      <section class="block" aria-labelledby="keywords-heading">
+        <div class="block-head"><h2 id="keywords-heading">Keywords</h2></div>
+        <ul class="tag-list is-roomy">
+          <li>ReLU networks</li>
+          <li>Fixed-architecture closure</li>
+          <li>Nonlinear approximation</li>
+          <li>Ordered aggregation</li>
+          <li>Width complexity</li>
+          <li>Polyhedral fans</li>
+        </ul>
+        <p class="msc"><span>MSC 2020 &mdash;</span> 68T07 (primary) &middot; 41A46 &middot; 41A63 &middot; 52B11</p>
+      </section>
+
+      <!-- One item per numbered result of the paper; the reference says which. -->
+      <section class="block" aria-labelledby="keypoints-heading">
+        <div class="block-head"><h2 id="keypoints-heading">Key contributions</h2></div>
+        <ol class="keypoints">
+          <li>
+            <div>
+              <strong>First-layer closure threshold <span class="ref">Theorem 2.6</span></strong>
+              <p>\(r_{\mathrm{cl}}(d) = \kappa_d\) for every \(d \ge 40\), and the same conclusion for every \(d \ge 14\) using the stored tournament masks and exact integer existence bounds of Section 3.3. For the upper bound, one fixed architecture of first width \(\kappa_d\) and finite second width has a parameter sequence converging to \(\mathrm{MAX}_d\) in \(L^p\) for every \(1 \le p &lt; \infty\).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Bounded fan localization <span class="ref">Theorem 2.2</span></strong>
+              <p>If every activation pattern on a finite arrangement has at least \(d\) active rows, any target with a finite ridge formula lies in the \(L^p\) closure of the fixed architecture, with an explicit finite second width and the rate \(\lVert N_R - f \rVert^p \le C_p R^{-1/(d+1)}\).</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Parameter-uniform lower bound <span class="ref">Theorems 2.3, 2.11 and Proposition 2.4</span></strong>
+              <p>An absolute obstruction for the equilateral three-ray fan turns stable triple junctions into the bound \(r_{\mathrm{cl}}(f) \ge \tau_2(\mathcal{T})\), and Mantel's theorem evaluates \(\tau_2\) as \(\kappa_q\) on the complete triple hypergraph. Below the threshold, \(\lVert N - \mathrm{MAX}_d \rVert^2 \ge c_0\, d^{-13}(W + 1)^{-10}\), with no restriction on parameter norms, signs, biases, or bit complexity.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Ordered-aggregation threshold <span class="ref">Theorem 2.8 and Corollary 2.9</span></strong>
+              <p>The same value \(\kappa_q\) is the threshold for every ordered \(L\)-statistic with some \(\delta_r = \alpha_r - 2\alpha_{r+1} + \alpha_{r+2} \ne 0\). This covers top-\(k\) sums, individual order statistics, proper trimmed sums, and hence the support functions of all nontrivial hypersimplices.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <strong>Closure width against exact width <span class="ref">Theorems 2.12 and 2.13</span></strong>
+              <p>\(\max\{d, \kappa_d\} \le r_{\mathrm{cl}}(d) \le w_{\mathrm{cl}}(d) \le \kappa_d + d - 1\), so \(w_{\mathrm{cl}}(d)/d^2 \to 1/4\), whereas \(r_{\mathrm{ex}}(d) \ge \binom{d}{2} - \lfloor 4d/3 \rfloor\). For \(d \ge 14\) the zero infimal risk at the critical first width is therefore attained by no finite parameter vector.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section class="block" aria-labelledby="cite-heading">
+        <div class="block-head"><h2 id="cite-heading">Cite this preprint</h2></div>
+        <div class="bib">
+          <div class="bib-head">
+            <p>BibTeX</p>
+            <button class="copy-btn" type="button" data-copy-target="#bib-sharp-closure" hidden>Copy</button>
+          </div>
+          <pre id="bib-sharp-closure"><code>@misc{lu2026sharpclosure,
+  author    = {Shunqi Lu},
+  title     = {Sharp closure thresholds for two-hidden-layer {ReLU} networks},
+  year      = {2026},
+  version   = {v1},
+  publisher = {Zenodo},
+  doi       = {10.5281/zenodo.22728502},
+  url       = {https://doi.org/10.5281/zenodo.22728502}
+}</code></pre>
+        </div>
+        <p class="cite-plain">Shunqi Lu. (2026). <i>Sharp closure thresholds for two-hidden-layer ReLU networks</i> (v1). Zenodo. https://doi.org/10.5281/zenodo.22728502</p>
+      </section>
+
+      <nav class="paper-nav" aria-label="Other papers">
+        <a href="/publications/maximum-scattered-linear-sets-pg1q5.html">
+          <span class="dir">Next paper</span>
+          <span class="label">Completing the classification of maximum scattered linear sets in \(\mathrm{PG}(1, q^5)\)</span>
+        </a>
+        <a class="is-next" href="/publications/covariogram-balancing.html">
+          <span class="dir">Also available</span>
+          <span class="label">Exact coordinate-balancing calculus and sharp stability</span>
+        </a>
+      </nav>
+    </article>
+  </main>
+
+  <div class="shell">
+    <footer class="site-footer">
+      <p>&copy; 2026 Shunqi Lu</p>
+      <div class="footer-links">
+        <a href="/">About</a>
+        <a href="/#papers">Papers</a>
+        <a href="mailto:32023210246@cueb.edu.cn">Email</a>
+        <a href="https://orcid.org/0009-0005-8251-2070" rel="me">ORCID</a>
+      </div>
+    </footer>
   </div>
 </body>
 </html>
