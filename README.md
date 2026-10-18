@@ -8,16 +8,18 @@ published by GitHub Pages from the `main` branch.
 
 ## Papers
 
-- [Sharp closure thresholds for two-hidden-layer ReLU networks](https://shunqilu.github.io/publications/sharp-closure-thresholds.html) · [PDF](https://shunqilu.github.io/publications/sharp_closure_thresholds_two_hidden_layer_relu_networks_v1.pdf) · [DOI](https://doi.org/10.5281/zenodo.22728502)
 - [Completing the classification of maximum scattered linear sets in PG(1, q^5)](https://shunqilu.github.io/publications/maximum-scattered-linear-sets-pg1q5.html) · [PDF](https://shunqilu.github.io/publications/classification_maximum_scattered_linear_sets_PG1q5.pdf) · [DOI](https://doi.org/10.5281/zenodo.22232593)
-- [Exact coordinate-balancing calculus and sharp stability for symmetric lattice cross-covariograms](https://shunqilu.github.io/publications/covariogram-balancing.html) · [PDF](https://shunqilu.github.io/publications/covariogram-balancing.pdf) · [DOI](https://doi.org/10.5281/zenodo.22178367)
 
 ## Structure
 
 `index.html` carries the whole site: an About section, the research areas, and the
-complete, date-keyed list of papers. `publications/index.html` only redirects to that
+currently featured, date-keyed list of papers. `publications/index.html` only redirects to that
 list, so the old `/publications/` URL keeps working. Each paper additionally has its own
 page under `publications/`.
+
+When a paper is temporarily unlisted, remove its homepage card and research-area
+link together. Keep its individual HTML page and PDF available at their existing URLs.
+A research area without a listed paper has no count or expansion cue.
 
 Nothing is keyed to the current number of papers or areas. Entries are ordered by hand,
 newest first, and both lists take any number of rows.
